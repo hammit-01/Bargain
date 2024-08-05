@@ -33,12 +33,19 @@ AndroidManifest 파일: 다운로드 후 안드로이드스튜디오의 app > ma
 2024.08.06 2:06 AM Upload by 김채희
 
 Version History
+
 로그인 페이지 구현해놨습니다 
+
 1.AndroidManifest 파일에 LoginActiviy 추가
+
 2.LoginActivy.kt 코드 추가
+
 3.login_page.xml 코드 추가
+
 4.colors.xml 색상 추가
+
 5.bottom_nav_menu.xml에 임시로 마이 추가, 누르면 로그인페이지로 이동 (다음에 편집 예정)
+
 6.MainActivity.kt 에 my 메뉴 추가
 
 ! auction 파일, res파일, androidManifest 파일 다운로드 후 각 폴더, 파일에 복사
