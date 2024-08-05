@@ -27,3 +27,18 @@ auction 파일: 다운로드 후 파일 속 7개의 항목들을 안드로이드
 res 파일: 다운로드 후 res 속 모든 파일을 안드로이드 스튜디오의 res 파일에 복사
 
 AndroidManifest 파일: 다운로드 후 안드로이드스튜디오의 app > manifests 파일에 복사
+
+----------------------------------------------------------------------------------------------------------------
+
+2024.08.06 2:06 AM Upload by 김채희
+
+Version History
+로그인 페이지 구현해놨습니다 
+1.AndroidManifest 파일에 LoginActiviy 추가
+2.LoginActivy.kt 코드 추가
+3.login_page.xml 코드 추가
+4.colors.xml 색상 추가
+5.bottom_nav_menu.xml에 임시로 마이 추가, 누르면 로그인페이지로 이동 (다음에 편집 예정)
+6.MainActivity.kt 에 my 메뉴 추가
+
+! auction 파일, res파일, androidManifest 파일 다운로드 후 각 폴더, 파일에 복사
