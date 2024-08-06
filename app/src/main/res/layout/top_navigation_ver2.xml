@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--하단 네비게이션 바-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="15dp"
+        android:text="BARGAIN"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/topNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/appTitle"
+        android:background="@color/basic"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyleBold"
+        app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
+        app:menu="@menu/top_nav_menu_ver2"/>
+</RelativeLayout>
