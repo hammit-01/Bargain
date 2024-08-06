@@ -49,3 +49,26 @@ Version History
 6.MainActivity.kt 에 my 메뉴 추가
 
 ! auction 파일, res파일, androidManifest 파일 다운로드 후 각 폴더, 파일에 복사
+
+----------------------------------------------------------------------------------------------------------------
+
+2024.08.07 01:38 AM Upload by 김혜미
+
+Version History
+
+- main branch에 프로젝트 전체 파일 업로드 했습니다
+
+1. 메인 홈 - MainActivity.kt 구현
+
+2. 상단, 하단 네비게이션 바 수정 및 추가 - DetailMenuBottom.kt, detail_menu_bottom.xml, top_navigation.xml, top_navigation_ver2.xml, bottom_nav_menu.xml, top_nav_menu.xml, top_nav_menu_ver2.xml
+
+3. 테마 수정 - theme.xml
+
+4. 각종 아이콘 추가
+
+5. 어댑터 추가 - HorizontalAdapter.kt, PosterAdapter.kt
+
+### main branch의 파일들을 압축파일로 다운로드 후 그대로 프로젝트 실행하시면 됩니다.
+#### 프로젝트 실행이 안된다면 .gradle 파일을 다운받아 붙여넣으면 됩니다.
+#### 이후에 발생할 수 있는 문제 중 안드로이드 스튜디오에 에뮬레이터 앱이 안뜰 수 있는데 이때 상단의 file - invalidate cache ... - 세가지 옵션 선택 하지 않고 그대로 파란 버튼 클릭 하면 작동 되실겁니다.
+#### .gradle 파일은 추후에 올려놓겠습니다.
