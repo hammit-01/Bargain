@@ -27,7 +27,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 //Dependencies: -
 //
 //Version History: -
-// 코드작성 ~~~
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_cart -> {
-                    // Todo cart 메뉴 클릭 처리
+                    // Todo cart 메뉴 클릭 처리했음
 //                    val intent = Intent(this, ActivityPage::class.java)
 //                    startActivity(intent)
                     true
