@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_cart -> {
-                    // Todo cart 메뉴 클릭 처리했음
+                    // Todo cart 메뉴 클릭 처리
 //                    val intent = Intent(this, ActivityPage::class.java)
 //                    startActivity(intent)
                     true
