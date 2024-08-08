@@ -27,6 +27,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 //Dependencies: -
 //
 //Version History: -
+// 코드작성 ~~~
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
