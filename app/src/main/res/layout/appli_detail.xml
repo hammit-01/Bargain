@@ -8,14 +8,14 @@
     android:orientation="vertical"
     tools:context=".experience.AppliActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+    <include
+        android:id="@+id/topNavigation"
+        layout="@layout/top_navigation_ver2"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="@color/white"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
-        app:menu="@menu/bottom_nav_menu"/>
+        android:layout_height="wrap_content"
+        app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyleBold"
+        app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
+        android:layout_alignParentTop="true"/>
 
     <ScrollView
         android:layout_width="match_parent"

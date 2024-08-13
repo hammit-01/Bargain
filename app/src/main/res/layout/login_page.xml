@@ -120,7 +120,7 @@
         android:layout_height="wrap_content"
         android:text="로그인"
         android:textColor="@android:color/white"
-        android:background="#A2906E"
+        android:background="@color/main_button_color"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/findPasswordTextView"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,14 +139,15 @@
         android:layout_marginTop="16dp"
         android:gravity="center">
 
-        <TextView
-            android:id="@+id/findEmailTextView"
+        <Button
+            android:id="@+id/findEmailButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="이메일 찾기"
             android:textSize="14sp"
             android:textColor="@color/middle_gray"
-            android:layout_marginEnd="8dp"/>
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackground"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -156,14 +157,16 @@
             android:textColor="@color/gray"
             android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/signUpTextView"
+        <Button
+            android:id="@+id/signUpButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="회원가입"
             android:textSize="14sp"
-            android:textColor="@color/middle_gray"/>
+            android:textColor="@color/middle_gray"
+            android:background="?attr/selectableItemBackground"/>
     </LinearLayout>
+
 
     <!-- 카카오 로그인 버튼 -->
     <LinearLayout
@@ -194,5 +197,4 @@
             android:textSize="16sp"
             android:layout_marginStart="8dp"/>
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

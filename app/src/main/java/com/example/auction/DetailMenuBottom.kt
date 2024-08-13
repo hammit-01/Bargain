@@ -11,8 +11,8 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 //File Name: DetailMenuBottom.kt
 //Author: 김혜미
-//Date: 2024-07-29
-//Description: 화면 상단 메뉴 바입니다
+//Date: 2024-08-06
+//Description: 화면 하단 메뉴 바입니다
 //
 //Dependencies: -
 //

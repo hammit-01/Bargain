@@ -3,11 +3,13 @@ package com.example.auction.productpage
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.auction.DetailMenuBottom
 import com.example.auction.ItemData
+import com.example.auction.MainActivity
 import com.example.auction.R
 import com.example.auction.adapter.DetailAdapter
 import com.example.auction.experience.ActivityPage
@@ -26,33 +28,34 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.page_detail)
 
-        // NavigationView 설정
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
-        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+        // Top NavigationView 설정
+        val topNavigationView = findViewById<BottomNavigationView>(R.id.topNavigationView)
+        topNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.navigation_back -> {
-                    // Todo back 메뉴 클릭 처리
-                    onBackPressedDispatcher.onBackPressed()
+                    // Todo menu 메뉴 클릭 처리
+                     onBackPressedDispatcher.onBackPressed()
                     true
                 }
-
-                R.id.navigation_home -> {
-                    // Todo home 메뉴 클릭 처리
-                    val intent = Intent(this, BuyActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
-
                 R.id.navigation_find -> {
-                    // Todo find 메뉴 클릭 처리
-                    val intent = Intent(this, ActivityPage::class.java)
-                    startActivity(intent)
+                    // Todo home 메뉴 클릭 처리
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    startActivity(intent)
                     true
                 }
-
+                R.id.navigation_cart -> {
+                    // Todo like 메뉴 클릭 처리
+//                    val intent = Intent(this, ActivityPage::class.java)
+//                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }
+
+        // 상단 바 텍스트 설정
+        val myTextView: TextView = findViewById(R.id.appTitle)
+        myTextView.text = "상품"
 
         val data = listOf(
             ItemData(R.drawable.img1, "00마켓", "햇감자 1kg", "3만원 부터"),

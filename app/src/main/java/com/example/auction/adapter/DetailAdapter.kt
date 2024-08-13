@@ -21,7 +21,7 @@ class DetailAdapter(private val context: Context, private val data: List<ItemDat
     RecyclerView.Adapter<DetailAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.recycler_item, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.img_item, parent, false)
         return ViewHolder(view)
     }
 

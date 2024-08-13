@@ -3,6 +3,7 @@ package com.example.auction.experience
 import android.content.Intent
 import android.os.Bundle
 import android.widget.GridView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.auction.ItemData
 import com.example.auction.adapter.ListAdapter
@@ -23,13 +24,38 @@ class ActivityPage: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
 
-        // NavigationView 설정
+        // Top NavigationView 설정
+        val topNavigationView = findViewById<BottomNavigationView>(R.id.topNavigationView)
+        topNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_back -> {
+                    // Todo menu 메뉴 클릭 처리
+                     onBackPressedDispatcher.onBackPressed()
+                    true
+                }
+                R.id.navigation_find -> {
+                    // Todo home 메뉴 클릭 처리
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    startActivity(intent)
+                    true
+                }
+                R.id.navigation_cart -> {
+                    // Todo like 메뉴 클릭 처리
+//                    val intent = Intent(this, ActivityPage::class.java)
+//                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
+
+        // Bottom NavigationView 설정
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.navigation_back -> {
-                    // Todo back 메뉴 클릭 처리
-                    onBackPressedDispatcher.onBackPressed()
+                R.id.navigation_menu -> {
+                    // Todo menu 메뉴 클릭 처리
+                    // onBackPressedDispatcher.onBackPressed()
                     true
                 }
                 R.id.navigation_home -> {
@@ -38,15 +64,25 @@ class ActivityPage: AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-                R.id.navigation_find -> {
-                    // Todo find 메뉴 클릭 처리
-                    val intent = Intent(this, ActivityDetail::class.java)
-                    startActivity(intent)
+                R.id.navigation_like -> {
+                    // Todo like 메뉴 클릭 처리
+//                    val intent = Intent(this, ActivityPage::class.java)
+//                    startActivity(intent)
+                    true
+                }
+                R.id.navigation_user -> {
+                    // Todo user 메뉴 클릭 처리
+//                    val intent = Intent(this, ActivityPage::class.java)
+//                    startActivity(intent)
                     true
                 }
                 else -> false
             }
         }
+
+        // 상단 바 텍스트 설정
+        val myTextView: TextView = findViewById(R.id.appTitle)
+        myTextView.text = "체험"
 
         val data = listOf(
             // Todo Data Set (Database set)

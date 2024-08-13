@@ -8,18 +8,14 @@
     android:layout_height="match_parent"
     tools:context=".experience.ActivityDetail">
 
-    <!--Todo 세 개의 버튼 클릭시 뒤로가기, 홈으로 이동, 검색 기능으로 이동 추가-->
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
+    <include
+        android:id="@+id/topNavigation"
+        layout="@layout/top_navigation_ver2"
         android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="@color/white"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="@color/black"
-        app:menu="@menu/bottom_nav_menu"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:layout_height="wrap_content"
+        app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyleBold"
+        app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
+        android:layout_alignParentTop="true"/>
 
     <Button
         android:id="@+id/show_bottom_sheet_button"
@@ -36,7 +32,7 @@
         android:id="@+id/scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/bottomNavigationView"
+        app:layout_constraintTop_toBottomOf="@id/topNavigation"
         app:layout_constraintBottom_toTopOf="@id/show_bottom_sheet_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
