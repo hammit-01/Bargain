@@ -47,10 +47,14 @@ Version History
 2024.08.16 10:06 PM Uplad by 김민형
 ## 미완성 파일 ##
 1.TutorialActivity.kt 추가
+
 2.TutorialPagerAdapter.kt 추가
-3. activity_tutorial 추가
-4. bulid.gradle-dependencies 수정
-5. AndroidManifest.xml 수정
+
+3.activity_tutorial 추가 
+
+4.bulid.gradle-dependencies 수정
+  
+5.AndroidManifest.xml 수정
 
 미완성 파일이라서 새로운 branch 생성했습니다
 
