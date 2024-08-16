@@ -42,6 +42,22 @@ Version History
 3. loginpage.xml 수정
 4. sign_up_customer.xml, sign_up_seller.xml 추가
 5. colors.xml 수정
+----------------------------------------------------------------------------------------------------------------
+
+2024.08.16 10:06 PM Uplad by 김민형
+## 미완성 파일 ##
+1.TutorialActivity.kt 추가
+2.TutorialPagerAdapter.kt 추가
+3. activity_tutorial 추가
+4. bulid.gradle-dependencies 수정
+5. AndroidManifest.xml 수정
+
+미완성 파일이라서 새로운 branch 생성했습니다
+
+테스트 중 도트 표시기를 가져오는 과정에서 오류가 생긴 것 같습니다
+다른 것들은 정상 작동되니
+일단 파일 올려두고 차츰 수정해보도록 하겠습니다.
+안되면 삭제하고 다른 방식으로 하는 것을 고려하겠습니다
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -60,6 +76,8 @@ Version History
 4. 각종 아이콘 추가
 
 5. 어댑터 추가 - HorizontalAdapter.kt, PosterAdapter.kt
+
+
 
 ### main branch의 파일들을 압축파일로 다운로드 후 그대로 프로젝트 실행하시면 됩니다.
 #### 프로젝트 실행이 안된다면 .gradle 파일을 다운받아 붙여넣으면 됩니다.
