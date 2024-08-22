@@ -18,6 +18,8 @@ import com.example.auction.productpage.ProductActivity
 import com.example.auction.usermanage.LoginActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+// test
+
 // 아래는 주석문 매뉴얼입니다
 //File Name: MainActivity.kt
 //Author: 김혜미
