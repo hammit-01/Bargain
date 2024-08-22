@@ -4,13 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.GridView
-import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.auction.adapter.DetailAdapter
-import com.example.auction.adapter.GridAdapter
 import com.example.auction.adapter.HorizontalAdapter
 import com.example.auction.adapter.PosterAdapter
 import com.example.auction.experience.ActivityPage
