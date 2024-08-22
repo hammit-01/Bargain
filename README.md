@@ -30,25 +30,30 @@ AndroidManifest 파일: 다운로드 후 안드로이드스튜디오의 app > ma
 
 ----------------------------------------------------------------------------------------------------------------
 
-2024.08.06 2:06 AM Upload by 김채희
-### master branch에 가서 다운 받아주세요 ###
+2024.08.14 2:06 AM Upload by 김채희
+## 마스터 브랜치 -> develop_branch로 변경합니다 ##
+### 풀 퀘스트 확인 부탁드립니다 ###
 Version History
 
-로그인 페이지 구현해놨습니다 
+회원가입 페이지 구현해놨습니다
 
-1.AndroidManifest 파일에 LoginActiviy 추가
+1. SignUpCustomerActivity, SignUpSellerActivity 추가
+2. LoginActivity 수정
+3. loginpage.xml 수정
+4. sign_up_customer.xml, sign_up_seller.xml 추가
+5. colors.xml 수정
+----------------------------------------------------------------------------------------------------------------
 
-2.LoginActivy.kt 코드 추가
+2024.08.16 10:06 PM Uplad by 김민형
 
-3.login_page.xml 코드 추가
+1. TutorialActivity.kt 추가
+2. TutorialPagerAdapter.kt 추가
+3. activity_tutorial 추가 
+4. bulid.gradle-dependencies 수정
+5. AndroidManifest.xml 수정
 
-4.colors.xml 색상 추가
-
-5.bottom_nav_menu.xml에 임시로 마이 추가, 누르면 로그인페이지로 이동 (다음에 편집 예정)
-
-6.MainActivity.kt 에 my 메뉴 추가
-
-! auction 파일, res파일, androidManifest 파일 다운로드 후 각 폴더, 파일에 복사
+라이브러리를 변경하였습니다.
+앱 첫 실행시 튜토리얼을 데이터 삭제 전 까지 다시 나오지 않게끔 만들었습니다.
 
 ----------------------------------------------------------------------------------------------------------------
 
@@ -67,6 +72,8 @@ Version History
 4. 각종 아이콘 추가
 
 5. 어댑터 추가 - HorizontalAdapter.kt, PosterAdapter.kt
+
+
 
 ### main branch의 파일들을 압축파일로 다운로드 후 그대로 프로젝트 실행하시면 됩니다.
 #### 프로젝트 실행이 안된다면 .gradle 파일을 다운받아 붙여넣으면 됩니다.
