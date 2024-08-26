@@ -11,6 +11,7 @@
 [노션 사이트](https://www.notion.so/e987a059f26149d2847a41562b74916f)
 [Github 로그 및 변경사항](https://www.notion.so/Github-Log-c3f8b059da804e0b9e21bea5ef6449e0)
 [Todo](https://www.notion.so/7a67f6c6d20d4ce8a790990bc612f08e?v=e0e5730b84624b8dae3cfc84be455223)
+
 2024.07.29 11:12 AM Upload by 김혜미
 
 ! 프로젝트 생성 전 미리 안드로이드 스튜디오 세팅을 마쳐주세요
