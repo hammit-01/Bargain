@@ -9,4 +9,7 @@
     <color name="main_color">#B8A683</color>
     <color name="light_gray">#BCBCBC</color>
     <color name="middle_gray">#AFAFAF</color>
+    <color name="red">#FF4545</color>
+    <color name="main_button_color">#B8A683</color>
+    <color name="stroke_line_color">#ebebeb</color>
 </resources>

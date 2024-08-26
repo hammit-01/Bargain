@@ -19,15 +19,17 @@
         <activity android:name=".productpage.DetailActivity"></activity>
         <activity android:name=".productpage.BuyActivity"></activity>
         <activity android:name=".usermanage.LoginActivity"></activity>
+        <activity android:name=".usermanage.SignUpCustomerActivity"></activity>
+        <activity android:name=".usermanage.SignUpSellerActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <!-- TutorialActivity는 일반 액티비티로 설정 -->
+        <activity android:name=".tutorial.TutorialActivity" android:exported="true" />
     </application>
 </manifest>
