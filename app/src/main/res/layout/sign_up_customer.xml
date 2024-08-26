@@ -156,8 +156,8 @@
         android:id="@+id/signUpConfirmButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="가입하기"
         android:background="@color/main_button_color"
-        android:textColor="@color/white"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:text="가입하기"
+        android:textColor="@color/white" />
 </LinearLayout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "588770826470",
+    "project_id": "bargain-3c2d8",
+    "storage_bucket": "bargain-3c2d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588770826470:android:d488ca640f985e5da34327",
+        "android_client_info": {
+          "package_name": "com.example.auction"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsmLnfkkkJ1HO7aAt-6I0rZ52qd_naw-Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
