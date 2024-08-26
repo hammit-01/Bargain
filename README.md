@@ -84,6 +84,9 @@ Version History
 
 ! 앞으로의 프로젝트 변경사항은 main branch는 업데이트하지 마시고 각자의 branch에 업데이트 해주시길 바랍니다.
 (혹시 모를 상황을 대비한 원본파일 유지를 위함입니다.)
+
 ! 각자의 branch 업데이트 시에도 branch Readme에 수정사항 적어주세요.
+
 ! Github Log는 노션 페이지에 기록할 예정입니다. 노션의 Todo 페이지도 확인 바랍니다.
+
 ! compare&pull request 오류는 다시 확인해보고 말씀드리겠습니다.
