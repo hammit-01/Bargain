@@ -2,6 +2,7 @@ package com.example.auction.usermanage
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -11,14 +12,6 @@ import androidx.core.content.ContextCompat
 import com.example.auction.MainActivity
 import com.example.auction.R
 
-// File Name: DetailMenuBottom.kt
-// Author: 김채희
-// Date: 2024-08-06
-// Description: 로그인 화면입니다.
-//
-// Dependencies: -
-//
-// Version History:
 class LoginActivity : AppCompatActivity() {
     private lateinit var tabMember: TextView
     private lateinit var tabSeller: TextView
@@ -26,9 +19,11 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var findPasswordTextView: TextView
     private lateinit var loginButton: TextView
-    private lateinit var findEmailTextView: TextView
-    private lateinit var signUpTextView: TextView
+    private lateinit var findEmailButton: Button
+    private lateinit var signUpButton: Button
     private lateinit var kakaoLoginButton: LinearLayout
+
+    private var isMemberSelected: Boolean = true // 기본적으로 회원 탭이 선택됨
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,8 +36,8 @@ class LoginActivity : AppCompatActivity() {
         passwordEditText = findViewById(R.id.passwordEditText)
         findPasswordTextView = findViewById(R.id.findPasswordTextView)
         loginButton = findViewById(R.id.loginButton)
-        findEmailTextView = findViewById(R.id.findEmailTextView)
-        signUpTextView = findViewById(R.id.signUpTextView)
+        findEmailButton = findViewById(R.id.findEmailButton)
+        signUpButton = findViewById(R.id.signUpButton)
         kakaoLoginButton = findViewById(R.id.kakaoLoginButton)
 
         // Set initial tab colors
@@ -53,12 +48,14 @@ class LoginActivity : AppCompatActivity() {
             // 회원 탭 클릭 시 동작
             setTabColors(true)
             kakaoLoginButton.visibility = LinearLayout.VISIBLE
+            isMemberSelected = true // 회원 탭이 선택됨
         }
 
         tabSeller.setOnClickListener {
             // 판매자 탭 클릭 시 동작
             setTabColors(false)
             kakaoLoginButton.visibility = LinearLayout.GONE
+            isMemberSelected = false // 판매자 탭이 선택됨
         }
 
         // 로그인 버튼 클릭 리스너
@@ -86,15 +83,19 @@ class LoginActivity : AppCompatActivity() {
         }
 
         // 이메일 찾기 클릭 리스너
-        findEmailTextView.setOnClickListener {
+        findEmailButton.setOnClickListener {
             // 이메일 찾기 화면으로 이동
             Toast.makeText(this, "이메일 찾기", Toast.LENGTH_SHORT).show()
         }
 
         // 회원가입 클릭 리스너
-        signUpTextView.setOnClickListener {
-            // 회원가입 화면으로 이동
-            Toast.makeText(this, "회원가입", Toast.LENGTH_SHORT).show()
+        signUpButton.setOnClickListener {
+            val intent = if (isMemberSelected) {
+                Intent(this, SignUpCustomerActivity::class.java) // 회원가입 화면으로 이동
+            } else {
+                Intent(this, SignUpSellerActivity::class.java) // 판매자 가입 화면으로 이동
+            }
+            startActivity(intent)
         }
 
         // 카카오 로그인 버튼 클릭 리스너

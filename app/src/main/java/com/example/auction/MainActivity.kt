@@ -1,5 +1,6 @@
 package com.example.auction
 
+import com.example.auction.tutorial.TutorialActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -28,6 +29,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // 튜토리얼 완료 여부 확인
+        val pref = getSharedPreferences("tutorial", MODE_PRIVATE)
+        val isTutorialSeen = pref.getBoolean("isTutorialSeen", false)
+
+        if (!pref.getBoolean("isTutorialSeen", false)) {
+            startActivity(Intent(this, TutorialActivity::class.java))
+            finish() // MainActivity 종료
+        } else {
+            setContentView(R.layout.activity_main) // 메인 액티비티 레이아웃 설정
+        }
+
         // Todo 메인 엑티비티 변경
         // Top NavigationView 설정
         val topNavigationView = findViewById<BottomNavigationView>(R.id.topNavigationView)
@@ -38,18 +50,21 @@ class MainActivity : AppCompatActivity() {
                     // onBackPressedDispatcher.onBackPressed()
                     true
                 }
+
                 R.id.navigation_find -> {
                     // Todo find 메뉴 클릭 처리
 //                    val intent = Intent(this, MainActivity::class.java)
 //                    startActivity(intent)
                     true
                 }
+
                 R.id.navigation_cart -> {
                     // Todo cart 메뉴 클릭 처리
 //                    val intent = Intent(this, ActivityPage::class.java)
 //                    startActivity(intent)
                     true
                 }
+
                 else -> false
             }
         }
@@ -63,24 +78,28 @@ class MainActivity : AppCompatActivity() {
                     // onBackPressedDispatcher.onBackPressed()
                     true
                 }
+
                 R.id.navigation_home -> {
                     // Todo home 메뉴 클릭 처리
                     val intent = Intent(this, MainActivity::class.java)
                     startActivity(intent)
                     true
                 }
+
                 R.id.navigation_like -> {
                     // Todo like 메뉴 클릭 처리
 //                    val intent = Intent(this, ActivityPage::class.java)
 //                    startActivity(intent)
                     true
                 }
+
                 R.id.navigation_user -> {
                     // Todo user 메뉴 클릭 처리
                     val intent = Intent(this, LoginActivity::class.java)
                     startActivity(intent)
                     true
                 }
+
                 else -> false
             }
         }
@@ -129,7 +148,6 @@ class MainActivity : AppCompatActivity() {
         recyclerView2.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView2.adapter = PosterAdapter(this, data)
-
-        // Todo 사용자 로그인 여부에 따라 튜토리얼 액티비티 이동
     }
+        // Todo 사용자 로그인 여부에 따라 튜토리얼 액티비티 이동
 }
