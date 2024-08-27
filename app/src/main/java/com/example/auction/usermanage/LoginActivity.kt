@@ -17,6 +17,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
 
 // Todo loginActivity에 하단 메뉴 추가, 홈으로 못돌아가고 있음
+// Todo 사용자 로그인시 개인페이지로 전환
 class LoginActivity : AppCompatActivity() {
     private lateinit var tabMember: TextView
     private lateinit var tabSeller: TextView

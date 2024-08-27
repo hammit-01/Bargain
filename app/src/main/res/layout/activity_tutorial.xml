@@ -21,7 +21,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
 
-
         <Button
             android:id="@+id/btn_get_started"
             android:layout_width="match_parent"

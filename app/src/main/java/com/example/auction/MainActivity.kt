@@ -1,10 +1,9 @@
 package com.example.auction
 
-import com.example.auction.tutorial.TutorialActivity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.auction.adapter.DetailAdapter
@@ -12,8 +11,10 @@ import com.example.auction.adapter.HorizontalAdapter
 import com.example.auction.adapter.PosterAdapter
 import com.example.auction.experience.ActivityPage
 import com.example.auction.productpage.ProductActivity
+import com.example.auction.tutorial.TutorialActivity
 import com.example.auction.usermanage.LoginActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+
 
 // 아래는 주석문 매뉴얼입니다
 //File Name: MainActivity.kt
@@ -33,7 +34,12 @@ class MainActivity : AppCompatActivity() {
         val pref = getSharedPreferences("tutorial", MODE_PRIVATE)
         val isTutorialSeen = pref.getBoolean("isTutorialSeen", false)
 
-        if (!pref.getBoolean("isTutorialSeen", false)) {
+        // isTutorialSeen 값 초기화 (튜토리얼 페이지를 다시 보고 싶으시면 주석 취소하시면 됩니다.)
+//        getSharedPreferences("tutorial", MODE_PRIVATE).edit()
+//            .putBoolean("isTutorialSeen", false)
+//            .apply()
+
+        if (!isTutorialSeen) {
             startActivity(Intent(this, TutorialActivity::class.java))
             finish() // MainActivity 종료
         } else {
