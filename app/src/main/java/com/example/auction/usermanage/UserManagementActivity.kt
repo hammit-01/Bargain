@@ -2,18 +2,37 @@ package com.example.auction.usermanage
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.auction.MainActivity
 import com.example.auction.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.auth
+import com.google.firebase.firestore.FirebaseFirestore
 
-class SignUpSellerActivity : AppCompatActivity() {
+class UserManagementActivity : AppCompatActivity() {
+    // Firestore 인스턴스 초기화
+    private val db = FirebaseFirestore.getInstance()
+    // FirebaseAuth 인스턴스 초기화
+    private var auth = FirebaseAuth.getInstance()
+
+    private lateinit var logoutButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.sign_up_seller) // sign_up_seller.xml 레이아웃을 사용합니다.
+        setContentView(R.layout.user_page)
 
-        // 판매자 회원가입 로직 추가
+
+        logoutButton = findViewById(R.id.logoutButton)
+        logoutButton.setOnClickListener {
+            Firebase.auth.signOut()
+            Toast.makeText(this, "로그아웃 완료", Toast.LENGTH_LONG).show()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
 
         // Bottom NavigationView 설정
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)

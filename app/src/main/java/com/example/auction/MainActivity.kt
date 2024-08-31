@@ -13,7 +13,10 @@ import com.example.auction.experience.ActivityPage
 import com.example.auction.productpage.ProductActivity
 import com.example.auction.tutorial.TutorialActivity
 import com.example.auction.usermanage.LoginActivity
+import com.example.auction.usermanage.UserManagementActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 // 아래는 주석문 매뉴얼입니다
@@ -26,25 +29,15 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 //
 //Version History: -
 class MainActivity : AppCompatActivity() {
+    // Firestore 인스턴스 초기화
+    private val db = FirebaseFirestore.getInstance()
+    // FirebaseAuth 인스턴스 초기화
+    private var auth = FirebaseAuth.getInstance()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 튜토리얼 완료 여부 확인
-        val pref = getSharedPreferences("tutorial", MODE_PRIVATE)
-        val isTutorialSeen = pref.getBoolean("isTutorialSeen", false)
-
-        // isTutorialSeen 값 초기화 (튜토리얼 페이지를 다시 보고 싶으시면 주석 취소하시면 됩니다.)
-//        getSharedPreferences("tutorial", MODE_PRIVATE).edit()
-//            .putBoolean("isTutorialSeen", false)
-//            .apply()
-
-        if (!isTutorialSeen) {
-            startActivity(Intent(this, TutorialActivity::class.java))
-            finish() // MainActivity 종료
-        } else {
-            setContentView(R.layout.activity_main) // 메인 액티비티 레이아웃 설정
-        }
 
         // Todo 메인 엑티비티 변경
         // Top NavigationView 설정

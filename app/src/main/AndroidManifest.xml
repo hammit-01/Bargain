@@ -21,6 +21,7 @@
         <activity android:name=".usermanage.LoginActivity"></activity>
         <activity android:name=".usermanage.SignUpCustomerActivity"></activity>
         <activity android:name=".usermanage.SignUpSellerActivity"></activity>
+        <activity android:name=".usermanage.UserManagementActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

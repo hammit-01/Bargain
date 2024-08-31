@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.example.auction.MainActivity
 import com.example.auction.R
+import com.example.auction.tutorial.TutorialActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.auth
@@ -28,7 +30,6 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var findEmailButton: Button
     private lateinit var signUpButton: Button
     private lateinit var kakaoLoginButton: LinearLayout
-    private lateinit var logoutButton: Button
 
     // FirebaseAuth 인스턴스 초기화
     private var auth = FirebaseAuth.getInstance()
@@ -39,8 +40,28 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_page)
 
+        // 튜토리얼 완료 여부 확인
+        val pref = getSharedPreferences("tutorial", MODE_PRIVATE)
+        val isTutorialSeen = pref.getBoolean("isTutorialSeen", false)
+
+        // isTutorialSeen 값 초기화 (튜토리얼 페이지를 다시 보고 싶으시면 주석 취소하시면 됩니다.)
+//        getSharedPreferences("tutorial", MODE_PRIVATE).edit()
+//            .putBoolean("isTutorialSeen", false)
+//            .apply()
+
+        // 튜토리얼을 보지 않았을 시 TutorialActivity(튜토리얼 페이지)로 이동
+        // 유저가 로그인되어 있을 시 UserManagementActivity(사용자 개인 페이지 액티비티)로 이동
         // FirebaseAuth 인스턴스 초기화
         auth = FirebaseAuth.getInstance()
+        // 현재 사용자 가져오기
+        val currentUser = auth.currentUser
+        if (!isTutorialSeen) {
+            startActivity(Intent(this, TutorialActivity::class.java))
+            finish() // MainActivity 종료
+        } else if (currentUser != null) {
+            startActivity(Intent(this, UserManagementActivity::class.java))
+            finish()
+        }
 
         // Initialize views
         tabMember = findViewById(R.id.tabMember)
@@ -52,19 +73,50 @@ class LoginActivity : AppCompatActivity() {
         findEmailButton = findViewById(R.id.findEmailButton)
         signUpButton = findViewById(R.id.signUpButton)
         kakaoLoginButton = findViewById(R.id.kakaoLoginButton)
-        logoutButton = findViewById(R.id.logoutButton)
 
         // Set initial tab colors
         setTabColors(true)
 
-        // 현재 사용자 가져오기
-        val currentUser = auth.currentUser
         if (currentUser != null) {
             btnLogined()
-            Logined()
         } else {
             btnNotLogined()
             notLogin()
+        }
+
+        // Bottom NavigationView 설정
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_menu -> {
+                    // Todo menu 메뉴 클릭 처리
+                    // onBackPressedDispatcher.onBackPressed()
+                    true
+                }
+
+                R.id.navigation_home -> {
+                    // Todo home 메뉴 클릭 처리
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                R.id.navigation_like -> {
+                    // Todo like 메뉴 클릭 처리
+//                    val intent = Intent(this, ActivityPage::class.java)
+//                    startActivity(intent)
+                    true
+                }
+
+                R.id.navigation_user -> {
+                    // Todo user 메뉴 클릭 처리
+                    val intent = Intent(this, LoginActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+
+                else -> false
+            }
         }
 
     }
@@ -149,14 +201,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
-    private fun Logined() {
-        logoutButton.setOnClickListener {
-            Firebase.auth.signOut()
-            Toast.makeText(this, "로그아웃 완료", Toast.LENGTH_LONG).show()
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-        }
-    }
+
 
     private fun btnLogined() {
         tabMember.visibility = View.GONE
@@ -168,7 +213,6 @@ class LoginActivity : AppCompatActivity() {
         findEmailButton.visibility = View.GONE
         signUpButton.visibility = View.GONE
         kakaoLoginButton.visibility = View.GONE
-        logoutButton.visibility = View.VISIBLE
     }
 
     private fun btnNotLogined() {
@@ -181,6 +225,5 @@ class LoginActivity : AppCompatActivity() {
         findEmailButton.visibility = View.VISIBLE
         signUpButton.visibility = View.VISIBLE
         kakaoLoginButton.visibility = View.VISIBLE
-        logoutButton.visibility = View.GONE
     }
 }
