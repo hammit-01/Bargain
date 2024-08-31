@@ -7,24 +7,24 @@
 
 [노션 사이트](https://www.notion.so/e987a059f26149d2847a41562b74916f)
 
-[hammit <mpa0530@gmail.com> on 2024-08-26 at 오후 9:17]
+## hammit <mpa0530@gmail.com> on 2024-08-26 at 오후 9:17
 
 튜토리얼 화면 버튼 수정, Todo 추가
 
 
-[hammit <mpa0530@gmail.com> on 2024-08-27 at 오전 1:18]
+## hammit <mpa0530@gmail.com> on 2024-08-27 at 오전 1:18
 
 로그인, 회원가입 구현
 
 튜토리얼 로직 수정(ing)
 
 
-[hammit <mpa0530@gmail.com> on 2024-08-27 at 오후 5:26]
+## hammit <mpa0530@gmail.com> on 2024-08-27 at 오후 5:26
 
 튜토리얼 로직 수정 완료
 
 
-[hammit <mpa0530@gmail.com> on 2024-09-01 at 오전 2:45]
+## hammit <mpa0530@gmail.com> on 2024-09-01 at 오전 2:45
 
 1. UserManagementActivity(사용자 개인 페이지) 추가
 
