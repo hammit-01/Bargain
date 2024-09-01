@@ -1,14 +1,11 @@
 package com.example.auction.productpage
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.auction.MainActivity
 import com.example.auction.R
-import com.example.auction.experience.ActivityPage
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 //File Name: BuyActivity.kt

@@ -11,9 +11,7 @@ import com.example.auction.adapter.HorizontalAdapter
 import com.example.auction.adapter.PosterAdapter
 import com.example.auction.experience.ActivityPage
 import com.example.auction.productpage.ProductActivity
-import com.example.auction.tutorial.TutorialActivity
 import com.example.auction.usermanage.LoginActivity
-import com.example.auction.usermanage.UserManagementActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

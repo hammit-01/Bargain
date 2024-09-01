@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.widget.GridView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.auction.experience.ActivityPage
 import com.example.auction.adapter.GridAdapter
 import com.example.auction.ItemData
 import com.example.auction.MainActivity

@@ -14,9 +14,7 @@ import com.example.auction.MainActivity
 import com.example.auction.R
 import com.example.auction.tutorial.TutorialActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
 
 // Todo loginActivity에 하단 메뉴 추가, 홈으로 못돌아가고 있음
 // Todo 사용자 로그인시 개인페이지로 전환

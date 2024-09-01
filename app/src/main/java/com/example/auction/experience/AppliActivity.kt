@@ -1,10 +1,8 @@
 package com.example.auction.experience
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.auction.MainActivity
 import com.example.auction.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

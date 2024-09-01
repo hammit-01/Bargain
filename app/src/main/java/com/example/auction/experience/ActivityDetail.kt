@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.auction.adapter.DetailAdapter
 import com.example.auction.ItemData
-import com.example.auction.MainActivity
 import com.example.auction.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

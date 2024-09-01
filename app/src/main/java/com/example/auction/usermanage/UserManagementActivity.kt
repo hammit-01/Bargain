@@ -25,7 +25,7 @@ class UserManagementActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.user_page)
 
-
+        // Todo Layout 수정(미완성임)
         logoutButton = findViewById(R.id.logoutButton)
         logoutButton.setOnClickListener {
             Firebase.auth.signOut()
